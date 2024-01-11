@@ -1,0 +1,9 @@
+Using Docker to package tongsuo and tengine to easily meet GM requirements
+based on Tongsuo and tengine
+Tongsuo:https://github.com/Tongsuo-Project/Tongsuo
+Tengine:https://github.com/alibaba/tengine
+Myrepo:https://github.com/j1nj1CL/easygm
+
+How to Run
+1.docker load < easygm.tar
+2.sudo docker run -d -v [宿主机cert绝对位置]:/usr/local/nginx/cert -v [宿主机nginx.conf绝对位置]:/usr/local/nginx/conf/nginx.conf -p 443:443 easygm:1.0 /usr/local/nginx/sbin/nginx -g 'daemon off;'
